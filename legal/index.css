@@ -38,11 +38,16 @@ body {
     margin-bottom: 10px;
 }
 
+.link2 {
+    font-size: 1em;
+    color: #323bb8;
+}
+
 .heading {
     color: #323bb8;
     text-align: center;
     font-size: 2.5em;
-    margin-top: 30vh;
+    margin-top: 32vh;
 }
 
 .paragraph {
