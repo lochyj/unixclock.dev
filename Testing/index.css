@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+* {
+    font-family: 'Asap', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.left-margin {
+    margin-left: 15px;
+}
+
+.navContainer {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    display: inline-block;
+}
+
+.nav {
+    font-size: 1.6em;
+    color: blue;
+    text-decoration: underline solid;
+}
+
+.nav:hover {
+    text-decoration: none;
+}
+
+.info {
+    margin-top: 35vh;
+    text-align: center;
+    font-size: 1.7em;
+    color: blue;
+}
+
+.copy {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    border: none;
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    font-size: 1.4em;
+    border-radius: 5px;
+    transition: transform 300ms ease-in-out 25ms;
+}
+
+.copy:hover {
+    background-color: #3b3bff;
+    transform: translate(0, 2px);
+}
+
+.copy:active {
+    background-color: #5353b4;
+}
+
+.noScript {
+    color: red;
+}
+
+#unixContainer {
+    display: grid;
+    place-items: center;
+}
+
+#unixTime {
+    color: blue;
+    font-family: 'DM Mono', monospace;
+    font-size: 4em;
+}
