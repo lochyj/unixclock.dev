@@ -1,3 +1,3 @@
 function copyInfo() {
-    navigator.clipboard.writeText('https://unixclock.dev');
+    navigator.clipboard.writeText('https://unixclock.net');
 }

@@ -22,7 +22,7 @@ body {
 
 .nav {
     font-size: 1.6em;
-    color: #323bb8;
+    color: blue;
     text-decoration: underline solid;
 }
 
@@ -32,27 +32,27 @@ body {
 
 .link {
     font-size: 1.3em;
-    color: #323bb8;
+    color: blue;
     margin-left: 40vw;
     margin-right: 40vw;
     margin-bottom: 10px;
 }
 
 .heading {
-    color: #323bb8;
+    color: blue;
     text-align: center;
     font-size: 2.5em;
     margin-top: 30vh;
 }
 
 .paragraph {
-    color: #323bb8;
+    color: blue;
     text-align: center;
     font-size: 1.5em;
 }
 
 .share h4 {
-    color: #323bb8;
+    color: blue;
     display: block;
     text-align: center;
     font-size: 1.7em;
@@ -65,7 +65,7 @@ body {
     margin-right: auto;
     justify-content: center;
     border: none;
-    background-color: #323bb8;
+    background-color: blue;
     color: white;
     padding: 6px;
     font-size: 1.4em;
