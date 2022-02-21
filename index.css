@@ -6,6 +6,10 @@
     margin: 0px;
 }
 
+html {
+    height: 100%;
+}
+
 .info {
     margin-top: 33vh;
     text-align: center;
@@ -69,4 +73,26 @@
     color: blue;
     font-family: 'DM Mono', monospace;
     font-size: 4em;
+}
+
+.time {
+    margin-top: 200px;
+    font-size: 1em;
+    color: blue;
+    margin-left: 6vw;
+    margin-right: 5vw;
+    align-items: center;
+    bottom: 0;
+    top: 1;
+}
+
+.timeContainer {
+    display: inline-block;
+    justify-content: center;
+    margin-right: 3vw;
+}
+
+.timeIndicate {
+    font-size: 1.2em;
+    color: blue;
 }

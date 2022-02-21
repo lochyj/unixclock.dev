@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,88 @@
     <link rel="stylesheet" href="index.css" hreflang="en">
     <title>Milliseconds - Unix clock</title>
     <meta name="description" content="Unix clock - Quickly get the Unix timestamp in Milliseconds and Seconds!">
-    <meta name="robots" content= "index, follow">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898355255424239"
-     crossorigin="anonymous"></script>
+    <meta name="robots" content="index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898355255424239" crossorigin="anonymous"></script>
     <noscript>
         <h1 class="noScript">
             Please enable Javascript
         </h1>
     </noscript>
 </head>
+
 <body>
-    <div class="navContainer">
-        <a href="/sec" class="nav">Seconds</a>
-        <a href="/about" class="nav left-margin">About</a>
+    <div>
+        <p class="info">
+            The unix time in ms is:
+        </p>
+        <div id="centerContainer">
+            <h1 id="unixTime">
+                Please Wait...
+            </h1>
+        </div>
+        <button class="copy" onClick="copyTime()">
+            Copy
+        </button>
     </div>
-    <p class="info">
-        The unix time in ms is:
-    </p>
-    <div id="centerContainer">
-        <h1 id="unixTime">
-            Please Wait...
-        </h1>
-    </div>
-    <button class="copy" onClick="copyTime()">
-        Copy
-    </button>
+    <footer class="time">
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                Locale:
+            </h2>
+            <h1 id="Locale">
+                Please Wait...
+            </h1>
+        </div>
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                Locale zone:
+            </h2>
+            <h1 id="LocaleZone">
+                Please Wait...
+            </h1>
+        </div>
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                UTC:
+            </h2>
+            <h1 id="UTC">
+                Please Wait...
+            </h1>
+        </div>
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                AEST:
+            </h2>
+            <h1 id="Australia">
+                Please Wait...
+            </h1>
+        </div>
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                EST:
+            </h2>
+            <h1 id="USA">
+                Please Wait...
+            </h1>
+        </div>
+        <div class="timeContainer">
+            <h2 class="timeIndicate">
+                CST:
+            </h2>
+            <h1 id="China">
+                Please Wait...
+            </h1>
+        </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898355255424239" crossorigin="anonymous"></script>
+        <!-- e -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7898355255424239" data-ad-slot="5032026753" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
+        // Extra functions
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
@@ -47,31 +103,49 @@
         let Australia = '';
         let USA = '';
         let China = '';
-        let timeZone = '';
+        let timeZone = 'UTC' + moment().local().format("Z");
         //
 
         // Elements
         let unixEL = document.getElementById('unixTime');
+        let localeEL = document.getElementById('Locale');
+        let UTCEL = document.getElementById('UTC');
+        let AustraliaEL = document.getElementById('Australia');
+        let USAEL = document.getElementById('USA');
+        let ChinaEL = document.getElementById('China');
+        let timeZoneEL = document.getElementById('LocaleZone');
         //
 
-        function updateEL() {
+        async function updateEL() {
             unixEL.innerHTML = unixMS;
+            localeEL.innerHTML = locale;
+            UTCEL.innerHTML = UTC;
+            AustraliaEL.innerHTML = Australia;
+            USAEL.innerHTML = USA;
+            ChinaEL.innerHTML = China;
+            timeZoneEL.innerHTML = timeZone;
         }
 
         async function updateTime() {
             unixMS = moment().format("x");
             unixS = moment().format("X");
+            locale = moment().format("hh:mm:ss A");
+            UTC = moment().utc().format("hh:mm:ss A");
+            Australia = moment().utcOffset(10).format("hh:mm:ss A");
+            USA = moment().utcOffset(-5).format("hh:mm:ss A");
+            China = moment().utcOffset(8).format("hh:mm:ss A");
             await sleep(20);
             updateEL();
             updateTime();
         }
-        
+
         function copyTime() {
             let date = moment().format("x");
             navigator.clipboard.writeText(date);
         }
-        
+
         updateTime();
     </script>
 </body>
+
 </html>
