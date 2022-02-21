@@ -8,6 +8,8 @@
     <title>Milliseconds - Unix clock</title>
     <meta name="description" content="Unix clock - Quickly get the Unix timestamp in Milliseconds and Seconds!">
     <meta name="robots" content= "index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7898355255424239"
+     crossorigin="anonymous"></script>
     <noscript>
         <h1 class="noScript">
             Please enable Javascript
@@ -22,7 +24,7 @@
     <p class="info">
         The unix time in ms is:
     </p>
-    <div id="unixContainer">
+    <div id="centerContainer">
         <h1 id="unixTime">
             Please Wait...
         </h1>
@@ -30,6 +32,46 @@
     <button class="copy" onClick="copyTime()">
         Copy
     </button>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+    <script>
+        // Times
+        let unixMS = '';
+        let unixS = '';
+        let locale = '';
+        let UTC = '';
+        let Australia = '';
+        let USA = '';
+        let China = '';
+        let timeZone = '';
+        //
+
+        // Elements
+        let unixEL = document.getElementById('unixTime');
+        //
+
+        function updateEL() {
+            unixEL.innerHTML = unixMS;
+        }
+
+        async function updateTime() {
+            unixMS = moment().format("x");
+            unixS = moment().format("X");
+            await sleep(20);
+            updateEL();
+            updateTime();
+        }
+        
+        function copyTime() {
+            let date = moment().format("x");
+            navigator.clipboard.writeText(date);
+        }
+        
+        updateTime();
+    </script>
 </body>
 </html>

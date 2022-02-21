@@ -60,7 +60,7 @@
     color: red;
 }
 
-#unixContainer {
+#centerContainer {
     display: grid;
     place-items: center;
 }
