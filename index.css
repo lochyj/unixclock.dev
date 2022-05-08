@@ -6,12 +6,8 @@
     margin: 0px;
 }
 
-html {
-    height: 100%;
-}
-
 .info {
-    margin-top: 33vh;
+    margin-top: 30vh;
     text-align: center;
     font-size: 1.7em;
     color: blue;
@@ -56,6 +52,11 @@ html {
     transform: translate(0, 2px);
 }
 
+.wrap{
+    display: grid;
+    place-items: center;
+}
+
 .copy:active {
     background-color: #3d3da1;
 }
@@ -76,20 +77,20 @@ html {
 }
 
 .time {
-    margin-top: 200px;
     font-size: 1em;
     color: blue;
-    margin-left: 6vw;
-    margin-right: 5vw;
-    align-items: center;
-    bottom: 0;
-    top: 1;
+    position: absolute;
+    bottom:0;
+    height: 80px;   /* Height of the footer */
+    display: grid;
+    place-items: center;
 }
 
 .timeContainer {
     display: inline-block;
     justify-content: center;
     margin-right: 3vw;
+    align-items: center;
 }
 
 .timeIndicate {
