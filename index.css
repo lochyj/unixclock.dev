@@ -39,6 +39,7 @@
 
 .out {
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .out span {
@@ -80,4 +81,29 @@
 
 .info {
     font-size: 1.2rem;
+}
+
+.inputfield div label {
+    display: block;
+    border-radius: 5px;
+    pointer-events: none;
+    margin: 5px;
+}
+.inputfield div{
+    position: relative;
+    display: inline-block;
+}
+
+.smallInput {
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 5rem;
+    text-align: center;
+    position: relative;
+}
+
+.big {
+    min-width: 3rem;
 }
