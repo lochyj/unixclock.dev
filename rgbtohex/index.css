@@ -136,12 +136,12 @@ footer div{
     display: inline-block;
 }
 
-.link {
-    color: #000;
-    font-size: 1.2rem;
-    text-decoration: none;
+#r{
+    border: 1px solid red;
 }
-
-.link:hover {
-    text-decoration: underline;
+#g{
+    border: 1px solid green;
+}
+#b{
+    border: 1px solid blue;
 }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" hreflang="en">
+    <title>Unix clock | Rgb to Hex</title>
+    <meta name="description" content="Unix clock - Quickly get the Unix timestamp tools and time in seconds!">
+    <meta name="robots" content="index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6819439731045853"
+     crossorigin="anonymous"></script>
+    <noscript>
+        <h1 class="noScript">
+            Please enable Javascript
+        </h1>
+    </noscript>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="title"><a href="https://unixclock.net">Unix clock</a></h1>
+        </div>
+        <div class="padding">
+            <div class="divider">
+                <h2>Tools:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>
+                    RGB to HEX
+                </h3>
+                <form onsubmit="rgbtohex(); return false;">
+                    <span style="display: block;">Input <b>RGB</b> values:</span>
+                    <input type="text" id="r" maxlength="3" placeholder="Red: 0 - 255" class="input">
+                    <input type="text" id="g" maxlength="3" placeholder="Green: 0 - 255" class="input">
+                    <input type="text" id="b" maxlength="3" placeholder="Blue: 0 - 255" class="input">
+                    <input type="submit" value="Convert" class="inputBtn">
+                </form>
+                <div class="out">
+                    <span id="hexPre" style="display:none; font-weight:bold;">Hex:</span>
+                    <span id="hexOut"></span>
+                </div>
+                <h3>
+                    HEX to RGB
+                </h3>
+                <form onsubmit="hextorgb(); return false;">
+                    <span style="display: block;">Input <b>HEX</b> values:</span>
+                    <input type="text" id="hex" maxlength="7" placeholder="#000000" class="input">
+                    <input type="submit" value="Convert" class="inputBtn">
+                </form>
+                <div class="out">
+                    <span id="rgbPre" style="display:none; font-weight:bold;">Rgb:</span>
+                    <span id="rgbOut"></span>
+                </div>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>Info:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>
+                    <br>About
+                </h3>
+                <span class="info">Unixclock.net is a simple site which has many helpful tools for your needs. Such as: Unix time to Human time; RGB to Hex; The unix time; And much more... </span>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>Language usage:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>Convert RGB to HEX in other languages</h3><br>
+                <div class="otherLang">
+                    <!--Convert RGB to Hex in python-->
+                    Python: <span class="code">'%02x%02x%02x' % rgbValue</span>
+                    Javascript: <span class="code">'#' + rgbValue.map(function(x){return ('0' + parseInt(x).toString(16)).slice(-2)}).join('')</span>
+                    PHP: <span class="code">sprintf('%02x%02x%02x', rgbValue)</span>
+                    Ruby: <span class="code">"%02x%02x%02x" % rgbValue</span>
+                    Java: <span class="code">String.format("%02x%02x%02x", rgbValue)</span>
+                    C#: <span class="code">string.Format("{0:x2}{1:x2}{2:x2}", rgbValue)</span>
+                    C++: <span class="code">std::stringstream ss; ss << std::hex << rgbValue; return ss.str();</span>
+                    C: <span class="code">sprintf( "%02X%02X%02X", rgbValue );</span>
+                </div>
+                <h3>Convert HEX to RGB in other languages</h3><br>
+                <div class="otherLang">
+                    <!--Convert Hex to rgb in python-->
+                    Python: <span class="code">[int(x, 16) for x in re.findall(r'..', hexValue)]</span>
+                    Javascript: <span class="code">hexValue.substr(1).match(/.{2}/g).map(function(x){return parseInt(x, 16)})</span>
+                    PHP: <span class="code">sscanf(hexValue, "%2x%2x%2x")</span>
+                    Ruby: <span class="code">hexValue.scan(/../).map{|x| x.hex}</span>
+                    Java: <span class="code">Integer.parseInt(hexValue, 16)</span>
+                    C#: <span class="code">int.Parse(hexValue.Substring(1), System.Globalization.NumberStyles.HexNumber)</span>
+                    C++: <span class="code">std::stringstream ss; ss << std::hex << hexValue; return ss.str();</span>
+                    C: <span class="code">sscanf(hexValue, "%02x%02x%02x")</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Contact:<br>
+            <a href="mailto:contact@unixclock.net">contact@unixclock.net</a>
+        </div>
+        <div>
+            Copyright:<br> &copy; <a href="https://lachlanjowett.com" rel="canonical"></a>Lachlanjowett.com 2021 - 2022
+        </div>
+    </footer>
+
+    <script>
+        // Extra functions
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+    <script>
+        function componentToHex(c) {
+            var hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+        }
+
+        function hextorgb() {
+            var hex = document.getElementById("hex").value;
+            var nohash = hex.replace("#", "");
+            var r = parseInt(nohash.substring(0, 2), 16);
+            var g = parseInt(nohash.substring(2, 4), 16);
+            var b = parseInt(nohash.substring(4, 6), 16);
+            var rgb = "rgb(" + r + ", " + g + ", " + b + ")";
+            document.getElementById("rgbOut").innerHTML = rgb;
+            document.getElementById("rgbPre").style.display = "block";
+        }
+        
+        function rgbtohex() {
+            var r = parseInt(document.getElementById("r").value);
+            var g = parseInt(document.getElementById("g").value);
+            var b = parseInt(document.getElementById("b").value);
+            var hex = '#' + componentToHex(r) +componentToHex(g) +componentToHex(b)
+            document.getElementById("hexOut").innerHTML = hex;
+            document.getElementById("hexPre").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
