@@ -107,3 +107,23 @@
 .big {
     min-width: 3rem;
 }
+
+.code {
+    font-family: "DM Mono", monospace;
+    margin: 10px;
+}
+
+.otherLang span {
+    display: block;
+}
+
+footer {
+    margin-left: 8vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+footer div{
+    margin-right: 10px;
+    display: inline-block;
+}
