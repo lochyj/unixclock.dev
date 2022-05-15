@@ -6,15 +6,40 @@
     margin: 0px;
 }
 
+:root {
+    --color: #000;
+    --bg: #fff;
+    --size-small: 1.1rem;
+    --size-medium: 1.4rem;
+    --size-large: 2.6rem;
+    --border: 1px solid #000;
+    --border-radius: 5px;
+    --hover-bg: #E8F0FE;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color);
+    font-size: var(--size);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 0px 10px 0px 10px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: var(--hover-bg);
+}
+
 .title {
     font-family: "DM Mono", monospace;
     margin: 20px;
-    font-size: 2.6rem;
+    font-size: var(--size-large);
     font-weight: bold;
 }
 
 .title a{
-    color: #000;
+    color: var(--color);
     text-decoration: none;
 }
 .title:hover a{
@@ -27,22 +52,22 @@
 
 .input {
     padding: 5px;
-    font-size: 1.2rem;
+    font-size: var(--size-small);
     border-radius: 5px;
-    border: 1px solid black;
+    border: var(--border);
 }
 
 .inputBtn {
     padding: 5px;
-    background-color: #fff;
+    background-color: var(--bg);
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: var(--size-small);
     cursor: pointer;
-    border: 1px solid black;
+    border: var(--border);
 }
 
 .inputBtn:hover {
-    background-color: #E8F0FE;
+    background-color: var(--hover-bg);
 }
 
 .out {
@@ -51,7 +76,7 @@
 }
 
 .out span {
-    font-size: 1.2rem;
+    font-size: var(--size-small);
 }
 
 .copy {
@@ -60,21 +85,21 @@
 }
 
 .time {
-    font-size: 1.2rem;
+    font-size: var(--size-small);
     display: inline;
 }
 
 .time button {
     padding: 3px;
-    background-color: #fff;
+    background-color: var(--bg);
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: var(--size-small);
     cursor: pointer;
-    border: 1px solid black;
+    border: var(--border);
 }
 
 .time button:hover {
-    background-color: #E8F0FE;
+    background-color: var(--hover-bg);
 }
 
 .divider h2 {
@@ -83,12 +108,12 @@
 
 .divider div {
     margin-bottom: 15px;
-    border-top: 1px solid black;
+    border-top: var(--border);
     margin-right: 8vw;
 }
 
 .info {
-    font-size: 1.2rem;
+    font-size: var(--size-small);
 }
 
 .inputfield div label {
@@ -104,9 +129,9 @@
 
 .smallInput {
     padding: 5px;
-    font-size: 1.2rem;
+    font-size: var(--size-small);
     border-radius: 5px;
-    border: 1px solid black;
+    border: var(--border);
     width: 5rem;
     text-align: center;
     position: relative;
@@ -129,19 +154,19 @@ footer {
     margin-left: 8vw;
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: var(--size-small);
 }
 footer div{
     margin-right: 10px;
     display: inline-block;
 }
 
-.link {
-    color: #000;
-    font-size: 1.2rem;
-    text-decoration: none;
+#r{
+    border: 1px solid red;
 }
-
-.link:hover {
-    text-decoration: underline;
+#g{
+    border: 1px solid green;
+}
+#b{
+    border: 1px solid blue;
 }

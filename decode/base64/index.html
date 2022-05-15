@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/global.css" hreflang="en">
+    <title>Unix clock | Encode and Decode Base64</title>
+    <meta name="description" content="Unix clock - Quickly get the Unix timestamp with tools and more in seconds!">
+    <meta name="robots" content="index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6819439731045853"
+     crossorigin="anonymous"></script>
+    <noscript>
+        <h1 class="noScript">
+            Please enable Javascript
+        </h1>
+    </noscript>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="title"><a href="https://unixclock.net">Unix clock</a></h1>
+        </div>
+        <div class="padding">
+            <div class="divider">
+                <h2>Tools:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>
+                    Decode Base64
+                </h3>
+                <form onsubmit="decode64(); return false;">
+                    <span style="display: block;">Input <b>Base 64</b> string:</span>
+                    <input type="text" id="input" placeholder="Base 64 string here" class="input">
+                    <input type="submit" value="Convert" class="inputBtn">
+                </form>
+                <div class="out">
+                    <span id="Pre" style="display:none; font-weight:bold;">Decoded:</span>
+                    <span id="Out"></span>
+                </div>
+                <h3>
+                    Encode Base64
+                </h3>
+                <form onsubmit="encode64(); return false;">
+                    <span style="display: block;">Input <b>Normal</b> string:</span>
+                    <input type="text" id="input2" placeholder="Normal string here" class="input">
+                    <input type="submit" value="Convert" class="inputBtn">
+                </form>
+                <div class="out">
+                    <span id="pre2" style="display:none; font-weight:bold;">Base64:</span>
+                    <span id="out2"></span>
+                </div>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>More tools:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>
+                    Hex to RGB / RGB to Hex
+                </h3>
+                <span class="info">
+                    Need to convert a hexadecimal color to RGB or RGB to Hex?
+                </span><br>
+                <a class="link" href="https://unixclock.net/rgbtohex/">GO!</a>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>Info:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>
+                    <br>Why use base64?
+                </h3>
+                <span class="info">Base64 is an encoded binary that is stored in the same 64 characters all the time. It is used for sending data over connections that have different protocols; such as FTP. FTP translates line endings but with base64 this isn't a problem.</span>
+
+                <h3>
+                    <br>About
+                </h3>
+                <span class="info">Unixclock.net is a simple site which has many helpful tools for your needs. Such as: Unix time to Human time; RGB to Hex; The unix time; And much more... </span>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>Language usage:</h2>
+                <div></div>
+            </div>
+            <div>
+                <h3>Encode Base64 in other languages</h3><br>
+                <div class="otherLang">
+                    Python: <span class="code">
+                        import base64<br>
+                        base64.b64encode(b'String')
+                    </span>
+                    Javascript: <span class="code">
+                        btoa(String)
+                    </span>
+                    PHP: <span class="code">
+                        base64_encode('String')
+                    </span>
+                    C#: <span class="code">
+                        System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("String"))
+                    </span>
+                    Java: <span class="code">
+                        Base64.getEncoder().encodeToString("String".getBytes())
+                    </span>
+                    Ruby: <span class="code">
+                        Base64.encode64("String")
+                    </span>
+                    C: <span class="code">
+                        base64_encode("String")
+                    </span>
+                    C++: <span class="code">
+                        base64_encode("String")
+                    </span>
+                    Haskell: <span class="code">
+                        Base64.encode64 "String"
+                    </span>
+                    Rust: <span class="code">
+                        base64::encode("String")
+                    </span>
+                    Go: <span class="code">
+                        base64.StdEncoding.EncodeToString("String")
+                    </span>
+                    Swift: <span class="code">
+                        base64.encode("String")
+                    </span>
+                </div>
+                <h3>Decode Base64 in other languages</h3><br>
+                <div class="otherLang">
+                    Python: <span class="code">
+                        import base64<br>
+                        base64.b64decode(b'String')
+                    </span>
+                    Javascript: <span class="code">
+                        atob(String)
+                    </span>
+                    PHP: <span class="code">
+                        base64_decode('String')
+                    </span>
+                    C#: <span class="code">
+                        System.Convert.FromBase64String(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String("String")))
+                    </span>
+                    Java: <span class="code">
+                        Base64.getDecoder().decode("String".getBytes())
+                    </span>
+                    Ruby: <span class="code">
+                        Base64.decode64("String")
+                    </span>
+                    C: <span class="code">
+                        base64_decode("String")
+                    </span>
+                    C++: <span class="code">
+                        base64_decode("String")
+                    </span>
+                    Haskell: <span class="code">
+                        Base64.decode64 "String"
+                    </span>
+                    Rust: <span class="code">
+                        base64::decode("String")
+                    </span>
+                    Go: <span class="code">
+                        base64.StdEncoding.DecodeString("String")
+                    </span>
+                    Swift: <span class="code">
+                        base64.decode("String")
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Contact:<br>
+            <a href="mailto:contact@unixclock.net">contact@unixclock.net</a>
+        </div>
+        <div>
+            Copyright:<br> &copy; <a href="https://lachlanjowett.com" rel="canonical"></a>Lachlanjowett.com 2021 - 2022
+        </div>
+    </footer>
+
+    <script>
+        // Extra functions
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+    <script>
+        function decode64 () {
+            var input = document.getElementById("input").value;
+            let output = atob(input);
+            document.getElementById("Out").innerText = output;
+            document.getElementById("Pre").style.display = "block";
+        }
+        function encode64() {
+            var input = document.getElementById("input2").value;
+            let output = btoa(input);
+            document.getElementById("out2").innerText = output;
+            document.getElementById("pre2").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
