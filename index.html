@@ -20,76 +20,86 @@
 
 <body>
     <div class="container">
-        <div>
-            <h1 class="title"><a href="https://unixclock.net">Unix clock</a></h1>
-        </div>
         <div class="padding">
-            <div class="divider">
-                <!--Divider-->
-                <h2>Unix time:</h2>
-                <div></div>
-            </div>
             <div>
-                <!--Unix in MS-->
-                <span class="time">The current unix time in milliseconds is: <span id="miliseconds">please wait...</span> <button class="copy" onclick="copyTime('miliseconds')">Copy</button></span>
+                <h1 class="title"><a href="https://unixclock.net">Unix clock</a></h1>
             </div>
-            <div>
-                <!--Unix in Seconds-->
-                <span class="time">The current unix time in seconds is: <span id="seconds">please wait...</span> <button class="copy" onclick="copyTime('seconds')">Copy</button></span>
-            </div>
-            <div class="divider">
-                <!--Divider-->
-                <h2>Tools:</h2>
-                <div></div>
-            </div>
-            <div>
-                <h3>
-                    Unix time to UTC
-                </h3>
-                <!--Unix to Human-->
-                <form onsubmit="UnixtoTime(); return false;">
-                    <span style="display: block;">Input the Unix time in <b>MS</b>:</span>
-                    <input type="text" id="timestamp" placeholder="Enter a timestamp" class="input">
-                    <input type="submit" value="Convert" class="inputBtn">
-                </form>
-                <div class="out">
-                    <span id="timePre" style="display:none; font-weight:bold;">Locale:</span>
-                    <span id="timeUtc"></span>
+            <div class="alert">
+                <span id="alert" class="alertBtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Copied to clipboard
+              </div>
+            <div class="inlineOut">
+                <div class="inlineIN">
+                    <div class="divider">
+                        <!--Divider-->
+                        <h2>Tools:</h2>
+                        <div></div>
+                    </div>
+                    <div class="maxSmall">
+                        <h3>
+                            Unix time to UTC
+                        </h3>
+                        <!--Unix to Human-->
+                        <form onsubmit="UnixtoTime(); return false;">
+                            <span style="display: block;">Input the Unix time in <b>MS</b>:</span>
+                            <input type="text" id="timestamp" placeholder="Enter a timestamp" class="input">
+                            <input type="submit" value="Convert">
+                        </form>
+                        <div class="out">
+                            <span id="timePre" style="display:none; font-weight:bold;">Locale:</span>
+                            <span id="timeUtc"></span>
+                        </div>
+                        <div>
+                            <h3>
+                                Human time to Unix time
+                            </h3>
+                            <form onsubmit="HumanToUnix(); return false;" class="inputfield">
+                                <div>
+                                    <label>Year:</label>
+                                <input type="text" id="year" placeholder="YYYY" maxlength="4" type="number" step="1" class="smallInput big">
+                                </div>
+                                <div>
+                                    <label>Month:</label>
+                                <input type="text" id="month" placeholder="MM" maxlength="2" type="number" step="1" class="smallInput">
+                                </div>
+                                <div>
+                                    <label>Day:</label>
+                                <input type="text" id="day" placeholder="DD" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
+                                </div>
+                                <div>
+                                    <label>Hour:</label>
+                                <input type="text" id="hour" placeholder="HH" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
+                                </div>
+                                <div>
+                                    <label>Minute:</label>
+                                <input type="text" id="minute" placeholder="MM" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
+                                </div>
+                                <div>
+                                    <label>Second:</label>
+                                <input type="text" id="second" placeholder="SS" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
+                                </div>
+                                <input type="submit" value="Convert">
+                            </form>
+                            <div class="out">
+                                <span id="timeHuman" style="display:none; font-weight:bold;">Unix time:</span>
+                                <span id="timeUnix"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>
-                        Human time to Unix time
-                    </h3>
-                    <form onsubmit="HumanToUnix(); return false;" class="inputfield">
-                        <div>
-                            <label>Year:</label>
-                        <input type="text" id="year" placeholder="YYYY" maxlength="4" type="number" step="1" class="smallInput big">
-                        </div>
-                        <div>
-                            <label>Month:</label>
-                        <input type="text" id="month" placeholder="MM" maxlength="2" type="number" step="1" class="smallInput">
-                        </div>
-                        <div>
-                            <label>Day:</label>
-                        <input type="text" id="day" placeholder="DD" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
-                        </div>
-                        <div>
-                            <label>Hour:</label>
-                        <input type="text" id="hour" placeholder="HH" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
-                        </div>
-                        <div>
-                            <label>Minute:</label>
-                        <input type="text" id="minute" placeholder="MM" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
-                        </div>
-                        <div>
-                            <label>Second:</label>
-                        <input type="text" id="second" placeholder="SS" maxlength="2" minlength="2" step="1" type="number" class="smallInput">
-                        </div>
-                        <input type="submit" value="Convert" class="inputBtn">
-                    </form>
-                    <div class="out">
-                        <span id="timeHuman" style="display:none; font-weight:bold;">Unix time:</span>
-                        <span id="timeUnix"></span>
+                <div class="inlineIN maxBig">
+                    <div class="divider">
+                        <!--Divider-->
+                        <h2>Unix time:</h2>
+                        <div></div>
+                    </div>
+                    <div>
+                        <!--Unix in MS-->
+                        <span class="time"><b>Milliseconds</b>: <span id="miliseconds">please wait...</span> <button onclick="copyTime('miliseconds')">Copy</button></span>
+                    </div>
+                    <div>
+                        <!--Unix in Seconds-->
+                        <span class="time"><b>Seconds</b>: <span id="seconds">please wait...</span> <button onclick="copyTime('seconds')">Copy</button></span>
                     </div>
                 </div>
             </div>
@@ -103,7 +113,7 @@
                     Hex to RGB / RGB to Hex
                 </h3>
                 <span class="info">
-                    Need to convert a hexadecimal color to RGB or RGB to Hex?
+                    Need to convert a Hexadecimal color to RGB or RGB to Hexadecimal?
                 </span><br>
                 <a class="link" href="https://unixclock.net/rgbtohex/">GO!</a>
                 <h3>
@@ -119,7 +129,7 @@
                 <h2>Info:</h2>
                 <div></div>
             </div>
-            <div>
+            <div class="maxSmall">
                 <!--Info-->
                 <h3>
                     What is Unix time?
@@ -183,12 +193,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script>
-        // Extra functions
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-    </script>
+    <script src="./src/global.js"></script>
     <script>
         function HumanToUnix() {
             // use moment
@@ -214,6 +219,7 @@
         }
 
         function copyTime(el) {
+            showAlert()
             let data = document.getElementById(el).innerText;
             navigator.clipboard.writeText(data);
         }
@@ -225,7 +231,19 @@
                 updateTime();
             });
         }
-        updateTime()
+        function showAlert() {
+            document.getElementById("alert").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("alert").style.display = "none";
+            }, 2000);
+        }
+        var close = document.getElementById("alert");
+        close.onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+        onLoad(updateTime());
     </script>
 </body>
 

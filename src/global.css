@@ -4,50 +4,121 @@
     font-family: 'Andika New Basic', sans-serif;
     padding: 0px;
     margin: 0px;
+    color: var(--color);
+}
+
+body {
+    background-color: var(--bg);
 }
 
 :root {
-    --color: #000;
-    --bg: #fff;
+    --color: #9aa0a6;
+    --bg: #202124;
     --size-small: 1.1rem;
     --size-medium: 1.4rem;
     --size-large: 2.6rem;
-    --border: 1px solid #000;
+    --border: 1px solid #9aa0a6;
     --border-radius: 5px;
-    --hover-bg: #E8F0FE;
+    --hover-bg: #000000;
+    --button-color: #202124;
+    --button-bg: #8ab4f8;
+    --input-width: 12rem;
 }
 
-.link {
-    text-decoration: none;
-    color: var(--color);
-    font-size: var(--size);
+button, input[type=submit], a {
+    padding: 5px;
+    background-color: var(--button-bg);
+    border-radius: 5px;
+    font-size: var(--size-small);
+    cursor: pointer;
     border: var(--border);
-    border-radius: var(--border-radius);
-    padding: 0px 10px 0px 10px;
+    color: var(--button-color);
+    margin: 5px;
+    margin-left: 0px;
 }
 
-.link:hover {
+button:hover, input[type=submit]:hover, a {
     text-decoration: underline;
-    background-color: var(--hover-bg);
+}
+
+input[type=text] {
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: var(--size-small);
+    width: var(--input-width);
+    background-color: var(--bg);
+}
+
+.alert {
+    padding: 20px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    position: absolute;
+    bottom: 0;
+    top: 1;
+    border-radius: 10px 10px 0 0;
+    border: var(--border);
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+}
+
+.alert {
+    display: none;
+    transition: opacity 0.6s;
+}
+
+.alertBtn {
+    margin-right: 15px;
+    color: var(--button-color);
+    font-weight: bold;
+    float: right;
+    font-size: var(--size-small);
+    cursor: pointer;
+} 
+
+.inlineOut {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.inlineIn {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.maxSmall {
+    padding-right: 20%;
+}
+
+.maxBig {
+    min-width: 40vw;
 }
 
 .title {
     font-family: "DM Mono", monospace;
-    margin: 20px;
     font-size: var(--size-large);
     font-weight: bold;
+}
+
+.padding {
+    margin-left: 8vw;
 }
 
 .title a{
     color: var(--color);
     text-decoration: none;
+    background-color: #ffffff00;
+    border: none;
+    font-size: var(--size-large);
 }
 .title:hover a{
     text-decoration: underline;
-}
-
-.padding {
-    margin-left: 8vw;
 }
 
 .input {
@@ -55,19 +126,6 @@
     font-size: var(--size-small);
     border-radius: 5px;
     border: var(--border);
-}
-
-.inputBtn {
-    padding: 5px;
-    background-color: var(--bg);
-    border-radius: 5px;
-    font-size: var(--size-small);
-    cursor: pointer;
-    border: var(--border);
-}
-
-.inputBtn:hover {
-    background-color: var(--hover-bg);
 }
 
 .out {
@@ -87,19 +145,6 @@
 .time {
     font-size: var(--size-small);
     display: inline;
-}
-
-.time button {
-    padding: 3px;
-    background-color: var(--bg);
-    border-radius: 5px;
-    font-size: var(--size-small);
-    cursor: pointer;
-    border: var(--border);
-}
-
-.time button:hover {
-    background-color: var(--hover-bg);
 }
 
 .divider h2 {
@@ -127,15 +172,7 @@
     display: inline-block;
 }
 
-.smallInput {
-    padding: 5px;
-    font-size: var(--size-small);
-    border-radius: 5px;
-    border: var(--border);
-    width: 5rem;
-    text-align: center;
-    position: relative;
-}
+
 
 .big {
     min-width: 3rem;
