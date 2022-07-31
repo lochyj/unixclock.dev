@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../src/global.css" hreflang="en">
+    <title>Unix clock | Tools, Time and Docs</title>
+    <meta name="description" content="Unix clock - Quickly get the Unix timestamp with tools and more in seconds!">
+    <meta name="robots" content="index, follow">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6819439731045853" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.2.0/styles/github.css">
+    <noscript>
+        <h1 class="noScript">
+            Please enable Javascript
+        </h1>
+    </noscript>
+</head>
+
+<body>
+    <div class="container">
+        <div class="padding">
+            <div>
+                <h1 class="title"><a href="https://unixclock.net/blog">Unix clock blog</a></h1>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2 class="blogTitle">What is UNIX time?</h2>
+                <div></div>
+            </div>
+            <div>
+                <span class="info">
+                    In computing, Unix time (also known as POSIX time or Epoch time) is a system for describing instants in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970, not counting leap seconds.
+                    Unix time, however is not a true representation of time, as it does not take into account leap seconds.
+                    Leap seconds are added to UTC to keep it within 0.9 seconds of the mean solar time.
+                </span>
+                <h3>
+                    <br>What is going to happen on January 19, 2038?
+                </h3>
+                <span class="info">
+                    January 19, 2038 is a similar bug to Y2K. Unix time will get too large to be stored as a value in 32-bit signed integer and thus may cause many problems if the issue isnt fixed.
+                </span>
+                <h3>
+                    <br>What is a time_t party?
+                </h3>
+                <span class="info">
+                    A time_t pary is where Unix enthusiasts celebrate significant events of the Unix time value, for example, when the Unix time value reached 1,000,000; a time_t party was held by DKUUG (Danish Unix User Group) in Copenhagen, Denmark.
+                </span>
+            </div>
+            <div class="divider">
+                <!--Divider-->
+                <h2>Here are some examples in different programming languages</h2>
+                <div></div>
+            </div>
+            <div>
+                <div>
+                    <span class="info">Python:</span>
+                    <pre><code class="language-py">
+    import time
+    print(time.time())
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">JavaScript:</span>
+                    <pre><code class="language-js">
+    console.log(Date.now())
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">C++:</span>
+                    <pre><code class="language-cpp">
+    #include <iostream>
+    #include <ctime>
+    using namespace std;
+    int main() {
+        time_t now = time(0);
+        cout << now << endl;
+    }
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">C#:</span>
+                    <pre><code class="language-csharp">
+    using System;
+    class Program {
+        static void Main(string[] args) {
+            Console.WriteLine(DateTimeOffset.UtcNow.ToUnixTimeSeconds());
+        }
+    }
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Java:</span>
+                    <pre><code class="language-java">
+    import java.time.Instant;
+    class Main {
+        public static void main(String[] args) {
+            System.out.println(Instant.now().getEpochSecond());
+        }
+    }
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Ruby:</span>
+                    <pre><code class="language-ruby">
+    puts Time.now.to_i
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Go:</span>
+                    <pre><code class="language-go">
+    package main
+    import "fmt"
+    import "time"
+    func main() {
+        fmt.Println(time.Now().Unix())
+    }
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Rust:</span>
+                    <pre><code class="language-rust">
+    use std::time;
+    fn main() {
+        println!("{}", time::SystemTime::now().duration_since(time::UNIX_EPOCH).unwrap().as_secs());
+    }
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Swift:</span>
+                    <pre><code class="language-swift">
+    import Foundation
+    print(Int(Date().timeIntervalSince1970))
+                    </code></pre>
+                </div>
+                <div>
+                    <span class="info">Kotlin:</span>
+                    <pre><code class="language-kotlin">
+    import java.time.Instant
+    fun main() {
+        println(Instant.now().epochSecond)
+    }
+                    </code></pre>
+                </div>
+            </div>
+            <div class="divider">
+                <!--Divider for the footer-->
+                <br>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Contact:<br><br>
+            <a href="mailto:contact@unixclock.net">Contact@unixclock.net</a>
+        </div>
+        <div>
+            Sources:<br><br>
+            <a href="https://en.wikipedia.org/wiki/Unix_time">Wikipedia, Unix Time</a>
+            <a href="https://en.wikipedia.org/wiki/Year_2038_problem">Wikipedia, 2038 Problem</a>
+        </div>
+        <div>
+            Copyright:<br><br>  <a href="https://lachlanjowett.com" rel="canonical">&copy; Lachlanjowett.com 2021 - 2022</a>
+        </div>
+    </footer>
+    <script src="../src/global.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

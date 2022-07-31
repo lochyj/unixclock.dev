@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 * {
     font-family: 'Andika New Basic', sans-serif;
     padding: 0px;
@@ -11,18 +12,40 @@ body {
     background-color: var(--bg);
 }
 
+::selection {
+    background-color: #a4b2df;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
 :root {
-    --color: #9aa0a6;
-    --bg: #202124;
-    --size-small: 1.1rem;
-    --size-medium: 1.4rem;
+    --color: black;
+    --bg: whitesmoke;
+    --line-bg: #dfe3f0;
+    --size-small: 1.3rem;
+    --size-medium: 1.5rem;
     --size-large: 2.6rem;
-    --border: 1px solid #9aa0a6;
+    --border: 1px solid #5353530a;
+    --hover-border: 1px solid #dfe3f0;
     --border-radius: 5px;
-    --hover-bg: #000000;
-    --button-color: #202124;
-    --button-bg: #8ab4f8;
-    --input-width: 12rem;
+    --hover-bg: #dfe3f0;
+    --button-color: black;
+    --button-bg: #00000000;
+    --input-width: 14.5rem;
 }
 
 button, input[type=submit], a {
@@ -35,19 +58,23 @@ button, input[type=submit], a {
     color: var(--button-color);
     margin: 5px;
     margin-left: 0px;
-}
-
-button:hover, input[type=submit]:hover, a {
     text-decoration: underline;
 }
 
+button:hover, input[type=submit]:hover, a:hover {
+    border: var(--hover-border);
+    background-color: var(--hover-bg);
+}
+
+
 input[type=text] {
-    border: var(--border);
+    border: var(--hover-border);
     border-radius: 5px;
     padding: 5px;
     font-size: var(--size-small);
     width: var(--input-width);
     background-color: var(--bg);
+    font-family: 'Dela Gothic One', cursive;
 }
 
 .alert {
@@ -101,7 +128,8 @@ input[type=text] {
 }
 
 .title {
-    font-family: "DM Mono", monospace;
+    margin-left: -6vw;
+    font-family: 'Dela Gothic One', cursive;
     font-size: var(--size-large);
     font-weight: bold;
 }
@@ -111,6 +139,7 @@ input[type=text] {
 }
 
 .title a{
+    font-family: 'Dela Gothic One', cursive;
     color: var(--color);
     text-decoration: none;
     background-color: #ffffff00;
@@ -118,7 +147,7 @@ input[type=text] {
     font-size: var(--size-large);
 }
 .title:hover a{
-    text-decoration: underline;
+    text-decoration: underline 2px solid var(--color);
 }
 
 .input {
@@ -155,6 +184,7 @@ input[type=text] {
     margin-bottom: 15px;
     border-top: var(--border);
     margin-right: 8vw;
+    background-color: var(--line-bg);
 }
 
 .info {
@@ -206,4 +236,11 @@ footer div{
 }
 #b{
     border: 1px solid blue;
+}
+
+.blogTitle{
+    font-size: var(--size-medium);
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Dela Gothic One', cursive;
 }
