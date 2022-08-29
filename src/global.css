@@ -74,7 +74,7 @@ input[type=text] {
     font-size: var(--size-small);
     width: var(--input-width);
     background-color: var(--bg);
-    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Dela Gothic One', sans-serif;
 }
 
 .alert {
@@ -139,7 +139,7 @@ input[type=text] {
 }
 
 .title a{
-    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Dela Gothic One', sans-serif;
     color: var(--color);
     text-decoration: none;
     background-color: #ffffff00;
@@ -242,5 +242,5 @@ footer div{
     font-size: var(--size-medium);
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Dela Gothic One', sans-serif;
 }
